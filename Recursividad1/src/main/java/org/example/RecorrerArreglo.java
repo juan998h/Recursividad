@@ -1,28 +1,28 @@
-package org.example;
+import java.util.Arrays;
 
 public class RecorrerArreglo {
 
-
     public static void main(String[] args) {
 
-        int[] arreglo = {10, 20, 30, 40, 50};
+        int[] array = {1, 2, 3, 4, 5, 6};
 
-        System.out.println("Recorrido del arreglo:");
-        recorrerArregloRecursivo(arreglo, 0);
+        dividir(array, 0, array.length - 1);
+
     }
 
-    // Método recursivo para recorrer el arreglo
-    public static void recorrerArregloRecursivo(int[] arr, int i) {
+    public static void dividir(int[] array, int inicio, int fin) {
 
-        // CASO BASE: cuando se llega al final del arreglo
-        if (i == arr.length) {
+        // caso base
+        if (inicio >= fin) {
             return;
         }
 
-        // ACCIÓN: procesar el elemento actual
-        System.out.print(arr[i] + " ");
+        int mitad = (inicio + fin) / 2;
 
-        // CASO RECURSIVO: avanzar al siguiente índice
-        recorrerArregloRecursivo(arr, i + 1);
+        dividir(array, inicio, mitad);      // izquierda
+        dividir(array, mitad + 1, fin);
+        System.out.println(array[inicio]);
+        System.out.println(array[fin]);
+        // derecha
     }
 }
