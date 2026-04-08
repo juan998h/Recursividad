@@ -9,7 +9,11 @@
         <module name="Recursividad1" />
         <module name="listasEnlazadas" />
         <module name="VentasDiarias" />
+        <module name="ListasEnlazadass" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ListasEnlazadas" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>
